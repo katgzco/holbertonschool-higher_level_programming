@@ -6,8 +6,8 @@
  **/
 int check_cycle(listint_t *list)
 {
-	listint_t *list_step_one = list;
-	listint_t *list_step_two = list;
+	listint_t *l_step_1 = list;
+	listint_t *l_step_2 = list;
 
 	while (l_step_1 != NULL & l_step_2 != NULL & l_step_2->next != NULL)
 	{
