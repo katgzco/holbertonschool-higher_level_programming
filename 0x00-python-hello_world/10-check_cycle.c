@@ -1,4 +1,5 @@
-#include "list.h"
+#include "lists.h"
+
 /**
  * check_cycle - checks if a singly linked list has a cycle in it.
  * @list: the head reference.
@@ -6,8 +7,7 @@
  **/
 int check_cycle(listint_t *list)
 {
-	listint_t *l_step_1 = list;
-	listint_t *l_step_2 = list;
+	listint_t *l_step_1 = list, *l_step_2 = list;
 
 	while (l_step_1 != NULL && l_step_2 != NULL && l_step_2->next != NULL)
 	{
