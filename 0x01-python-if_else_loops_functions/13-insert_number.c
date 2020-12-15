@@ -12,7 +12,7 @@ listint_t *insert_node(listint_t **head, int number)
 	new_node->n = number;
 
 /*check if is list is empty or the first node*/
-	if (*head == NULL || (h_ref_first->next != NULL && number < (h_ref_first->n)))
+	if (*head == NULL || (h_ref_first->next != NULL && number >= (h_ref_first->n)))
 	{
 		new_node->n = number;
 		new_node->next = *head;
@@ -25,6 +25,7 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		if (h_ref_first->n <= number && h_ref_second->n >= number)
 		{
+			if (h_ref_first->n == )
 			new_node->next = h_ref_first->next;
 			h_ref_first->next = new_node;
 			return (new_node);
