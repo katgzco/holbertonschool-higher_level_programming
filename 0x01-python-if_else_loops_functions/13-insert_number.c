@@ -12,9 +12,8 @@ listint_t *insert_node(listint_t **head, int number)
 	new_node->n = number;
 
 /*check if is list is empty or the first node*/
-	if (*head == NULL || (h_ref_first->next != NULL && number <= (h_ref_first->n)))
+	if (*head == NULL || (h_ref_first->next != NULL && number < (h_ref_first->n)))
 	{
-		printf("entrer al ptrimero  h_ref %d  nu,ber %d\n", h_ref_first->n, number);
 		new_node->n = number;
 		new_node->next = *head;
 		*head = new_node;
