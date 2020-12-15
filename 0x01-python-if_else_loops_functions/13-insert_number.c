@@ -12,19 +12,19 @@ listint_t *insert_node(listint_t **head, int number)
 	new_node->n = number;
 
 /*check if is list is empty or the first node*/
-	if (*head == NULL || (h_ref_first->next != NULL && number < (h_ref_first->n)))
+	if (*head == NULL || (h_ref_first->next != NULL && number <= (h_ref_first->n)))
 	{
-/*		printf("entrer al ptrimero  h_ref %d  nu,ber %d\n", h_ref_first->n, number);
+		printf("entrer al ptrimero  h_ref %d  nu,ber %d\n", h_ref_first->n, number);
 		new_node->n = number;
 		new_node->next = *head;
-		*head = new_node;*/
-		return (NULL);
+		*head = new_node;
+		return (new_node);
 	}
 
 /*check if is in the middle*/
 	while (h_ref_second != NULL)
 	{
-		if (h_ref_first->n < number && h_ref_second->n > number)
+		if (h_ref_first->n <= number && h_ref_second->n >= number)
 		{
 			new_node->next = h_ref_first->next;
 			h_ref_first->next = new_node;
@@ -34,7 +34,7 @@ listint_t *insert_node(listint_t **head, int number)
 	h_ref_second = h_ref_second->next;
 	}
 /*is the last*/
-/*	h_ref_first->next = new_node;
-	new_node->next = NULL;*/
-	return (NULL);
+	h_ref_first->next = new_node;
+	new_node->next = NULL;
+	return (new_node);
 }
