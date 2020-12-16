@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 		if (*head == NULL)
 			return (1);
 
-		tmp_num = (*head)->n;
+		list_length = (*head)->n;
 		/*reverse nummber*/
 		if (list_length > 9)
 		{
