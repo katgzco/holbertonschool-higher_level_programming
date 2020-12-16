@@ -8,18 +8,14 @@
 int is_palindrome(listint_t **head)
 {
 	int list_length = 0, reverse_num = 0, tmp_num = 0;
-	listint_t *h_reference = *head;
 
 	if (head != NULL)
 	{
 		if (*head == NULL)
 			return (1);
-		/*size of the list */
-		for (list_length = 0; h_reference->next != NULL; list_length++)
-			h_reference = h_reference->next;
 
+		tmp_num = (*head)->n;
 		/*reverse nummber*/
-		tmp_num = list_length;
 		if (list_length > 9)
 		{
 			while (tmp_num)
