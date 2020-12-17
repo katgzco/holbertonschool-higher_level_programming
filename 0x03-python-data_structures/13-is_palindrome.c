@@ -7,8 +7,7 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int num_node = 0, check_position = 0;
-	int array_node[BUFSIZ], array_reverse[BUFSIZ];
+	int num_node = 0, check_position = 0, array_node[BUFSIZ];
 	listint_t *h_reference = *head;
 
 	if (head != NULL)
@@ -20,19 +19,15 @@ int is_palindrome(listint_t **head)
 		for (num_node = 0; h_reference != NULL; num_node++)
 		{
 			array_node[num_node] = h_reference->n;
-			array_reverse[num_node] = h_reference->n;
 			h_reference = h_reference->next;
 		}
 		/*compare nodes*/
 		num_node--;
 		for (check_position = 0; num_node >= 0 ; check_position++, --num_node)
-			if (array_node[check_position] != array_reverse[num_node])
-				break;
+			if (array_node[check_position] != array_node[num_node])
+				return (0);
 		/*is polindrome*/
-		if (num_node > 0)
-			return (0);
-		else
-			return (1);
+		return (1);
 	}
 	return (0);
 }
