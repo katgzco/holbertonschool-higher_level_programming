@@ -9,4 +9,5 @@ def roman_to_int(r_s):
                 num -= r_n[r_s[let]]
             else:
                 num += r_n[r_s[let]]
-    return num
+        return num
+    return 0
