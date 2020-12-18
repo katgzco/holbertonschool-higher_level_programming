@@ -5,7 +5,7 @@ def roman_to_int(r_s):
         num = 0
         lt = len(r_s)
         for let in range(len(r_s) - 1):
-            if r_n.get(r_s[let]) < r_n.get(r_s[let + 1]):
+            if let < lt - 1 and r_n.get(r_s[let]) < r_n.get(r_s[let + 1]):
                 num -= r_n[r_s[let]]
             else:
                 num += r_n[r_s[let]]
