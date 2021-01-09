@@ -1,6 +1,6 @@
 """
 
-	testing 3-say_my_name
+testing 3-say_my_name
 
 """
 Using ``say_my_name``
@@ -12,53 +12,29 @@ ___________________________________
 	>>> say_my_name = __import__('3-say_my_name').say_my_name
 
 	>>> say_my_name.__doc__ != None
-    	True
+	True
 
 say_my_name with integers:
-	>>> say_my_name("walter", "white")
-	My name is walter white
+	    >>> say_my_name("walter", "white")
+	    My name is walter white
 
-	>>> say_my_name("Bob")
-	My name is Bob 
+	    >>> say_my_name("", 444)
+	    Traceback (most recent call last):
+	    ...
+	    TypeError: last_name must be a string
 
-	>>> say_my_name(" ","lenon")
-	My name is   lenon
+	    >>> say_my_name(33, )
+	    Traceback (most recent call last):
+	    ...
+	    TypeError: first_name must be a string
 
-	>>> say_my_name("Betty""Holberton","lenon")
-	My name is BettyHolberton lenon
+	    >>> say_my_name("walter")
+	    My name is walter
 
-	>>> say_my_name("Betty", "Holberton""lenon")
-	My name is Betty Holbertonlenon
+	    >>> say_my_name("","waler")
+	    My name is  waler
 
-	>>> say_my_name("")
-	My name is  
-
-Test edge cases:
-
-Tets with integers:
-	>>> say_my_name("", 444)
-	Traceback (most recent call last):
-    	...
-	TypeError: last_name must be a string
-
-	>>> say_my_name(444, "")
-	Traceback (most recent call last):
-    	...
-	TypeError: firts_name must be a string
-
-Test empty:
-	say_my_name()
-	Traceback (most recent call last):
-	...
-	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
-
-	say_my_name(None)
-	Traceback (most recent call last):
-	...
-	TypeError: firts_name must be a string
-
-Test with tree arguments
-	>>> say_my_name("Bob", "Peter", "Julian")
-	Traceback (most recent call last):
-	...
-	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+	    >>> say_my_name()
+	    Traceback (most recent call last):
+	    ...
+	    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
