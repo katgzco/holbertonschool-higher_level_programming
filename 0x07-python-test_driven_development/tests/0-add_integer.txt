@@ -57,7 +57,7 @@ adding edge cases:
 	>>> add_integer(2)
 	100
 
-	>>> add_integer(2,))
+	>>> add_integer(2,)
 	100
 
  adding with None:
@@ -83,15 +83,12 @@ adding edge cases:
 	...
 	OverflowError: cannot convert float infinity to integer
 
-	>>> add_integer(3, float('inf'))
-	3 inf
-
 	>>> add_integer(5, float('NaN'))
 	Traceback (most recent call last):
 	...
 	ValueError: cannot convert float NaN to integer
 
-	>>> add_integer(float('NaN'), 5))
+	>>> add_integer(float('NaN'), 5)
 	Traceback (most recent call last):
 	...
 	ValueError: cannot convert float NaN to integer
