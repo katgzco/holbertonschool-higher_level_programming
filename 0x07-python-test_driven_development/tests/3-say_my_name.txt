@@ -24,6 +24,15 @@ say_my_name with integers:
 	>>> say_my_name(" ","lenon")
 	My name is   lenon
 
+	>>> say_my_name("Betty""Holberton","lenon")
+	My name is BettyHolberton lenon
+
+	>>> say_my_name("Betty", "Holberton""lenon")
+	My name is Betty Holbertonlenon
+
+	>>> say_my_name("")
+	My name is  
+
 Test edge cases:
 
 Tets with integers:
