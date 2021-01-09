@@ -29,7 +29,7 @@ say_my_name with integers:
 	    TypeError: first_name must be a string
 
 	    >>> say_my_name("walter")
-	    My name is walter
+	    My name is walter 
 
 	    >>> say_my_name("","waler")
 	    My name is  waler
