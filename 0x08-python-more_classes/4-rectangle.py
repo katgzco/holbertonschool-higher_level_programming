@@ -60,7 +60,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return str_print
         else:
-            for row in range(self.__height):
+            for row in range(self.__height - 1):
                 str_print += "#" * self.__width
                 if row < (self.__height - 1):
                     str_print += "\n"
