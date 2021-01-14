@@ -55,12 +55,12 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """Constructor to printable string representation of an object. """
+        """Method - retrurn String representation"""
         str_print = ""
         if self.__width == 0 or self.__height == 0:
             return str_print
         else:
-            for row in range(self.__height - 1):
+            for row in range(self.__height):
                 str_print += "#" * self.__width
                 if row < (self.__height - 1):
                     str_print += "\n"
@@ -68,4 +68,4 @@ class Rectangle:
 
     def __repr__(self):
         """Constructor “official” string representation of an object """
-        return repr(Rectangle(self.__width, self.__height))
+        return "Rectangle({}, {})".format(self.__width, self.__height)

@@ -58,13 +58,13 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """Constructor to printable string representation of an object. """
+        """Method - retrurn String representation"""
         str_print = ""
         if self.__width == 0 or self.__height == 0:
             return str_print
         else:
             for row in range(self.__height):
-                str_print += str(self.print_symbol) * self.__width
+                str_print += "#" * self.__width
                 if row < (self.__height - 1):
                     str_print += "\n"
             return str_print
