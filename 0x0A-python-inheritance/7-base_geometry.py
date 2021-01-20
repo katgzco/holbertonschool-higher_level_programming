@@ -5,6 +5,9 @@ Class BaseGeometry
 
 
 class BaseGeometry():
+    """
+    Template for a base geometry
+    """
 
     def area(self):
         """
