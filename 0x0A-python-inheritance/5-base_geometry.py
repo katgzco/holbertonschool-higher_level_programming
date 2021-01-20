@@ -4,5 +4,5 @@ empty class BaseGeometry
 """
 
 
-class BaseGeometry:
+class BaseGeometry():
     pass

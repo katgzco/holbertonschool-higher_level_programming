@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+checkk if object is an instance of a class that inherited from class
+"""
+
+
 def inherits_from(obj, a_class):
     """
     check if a object is exactly an instance of the specified class
