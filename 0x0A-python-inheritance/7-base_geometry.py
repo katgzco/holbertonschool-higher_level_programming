@@ -9,6 +9,10 @@ class BaseGeometry():
     Template for a base geometry
     """
 
+    def __init__(self):
+        """ Initial constructor space """
+        pass
+
     def area(self):
         """
         raises an Exception
