@@ -1,6 +1,5 @@
 #!/usr/bin/node
-import { argv } from 'process';
-const firstArgument = argv[2];
+const firstArgument = process.argv[2];
 let parseIntResult;
 let valueParseIntResult;
 
