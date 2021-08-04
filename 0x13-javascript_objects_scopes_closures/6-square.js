@@ -7,16 +7,16 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c) {
+    if (c && typeof c === 'string' && c.length === 1) {
       let column = this.height;
       while (column > 0) {
-        console.log('C'.repeat(this.width));
+        console.log(c.repeat(this.width));
         column--;
       }
     } else {
-        super.print();
+      this.print();
     }
   }
-};
+}
 
 module.exports = Square;
