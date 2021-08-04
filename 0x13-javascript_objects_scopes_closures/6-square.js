@@ -3,7 +3,7 @@ const SquareParent = require('./5-square');
 
 class Square extends SquareParent {
   charPrint (c) {
-    if (c === undefined) {
+    if (c && c === 'string') {
       let column = this.height;
       while (column > 0) {
         console.log(c.repeat(this.width));
