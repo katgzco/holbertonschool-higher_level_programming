@@ -1,11 +1,7 @@
 #!/usr/bin/node
-const Rectangle = require('./4-rectangle');
+const SquareParent = require('./5-square');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends SquareParent {
   charPrint (c) {
     if (c && typeof c === 'string' && c.length === 1) {
       let column = this.height;
