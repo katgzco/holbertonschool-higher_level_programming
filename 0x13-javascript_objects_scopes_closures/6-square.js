@@ -7,7 +7,7 @@ module.exports = class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c && typeof c === 'string' && c.length === 1) {
+    if (c) {
       let column = this.height;
       while (column > 0) {
         console.log('C'.repeat(this.width));
