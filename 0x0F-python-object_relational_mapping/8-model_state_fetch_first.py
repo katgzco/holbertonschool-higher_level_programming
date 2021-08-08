@@ -48,8 +48,11 @@ def performace_operation():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(State).filter(State.id == 1):
+    instance = session.query(State).first()
+    if (instance is not None):
         print('{}: {}'.format(instance.id, instance.name))
+    else:
+        print('Nothing')
 
 
 if __name__ == '__main__':
