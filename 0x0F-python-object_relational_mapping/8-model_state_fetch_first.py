@@ -48,7 +48,7 @@ def performace_operation():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for instance in session.query(State).filter_by(id=1):
+    for instance in session.query(State).filter(State.id == 1):
         print('{}: {}'.format(instance.id, instance.name))
 
 
