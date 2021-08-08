@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""[summary]
+""" lists all State objects from the database
+    methods:
+    take_arguemnts()
+    connect_to_db()
+    performace_operation()
     """
 
 from sys import argv
