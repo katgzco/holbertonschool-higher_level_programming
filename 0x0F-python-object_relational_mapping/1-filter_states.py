@@ -48,7 +48,9 @@ def perform_operations():
                 id, name
             FROM
                 states
-            WHERE LEFT(name, %d) = 'N' ORDER BY id ASC""" % 1
+            WHERE
+                name LIKE BINARY 'N%'
+            ORDER BY id ASC"""
 
     cursor.execute(sql)
     results = cursor.fetchall()
