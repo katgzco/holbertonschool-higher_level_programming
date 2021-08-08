@@ -51,10 +51,10 @@ def perform_operations():
             FROM
                 states
             WHERE
-                '%s' = name
-            ORDER BY id ASC""" % user_input
+                name = %s
+            ORDER BY id ASC"""
 
-    cursor.execute(sql)
+    cursor.execute(sql, (user_input, ))
     results = cursor.fetchall()
     for i in results:
         print(i)
