@@ -50,7 +50,9 @@ def perform_operations():
                 id, name
             FROM
                 states
-            WHERE '%s' = name ORDER BY id ASC""" % user_input
+            WHERE
+                '%s' LIKE BINARY name
+            ORDER BY id ASC""" % user_input
 
     cursor.execute(sql)
     results = cursor.fetchall()
