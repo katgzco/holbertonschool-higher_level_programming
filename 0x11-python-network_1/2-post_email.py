@@ -3,11 +3,11 @@
     POST request to the passed URL
     with the email as a parameter, and displays the body of the response 
     """
+
+from urllib import request, parse
+from sys import argv
+
 if __name__ == "__main__":
-
-    from urllib import request, parse
-    from sys import argv
-
     req = argv[1]
     information_to_pass = argv[2]
 
@@ -19,5 +19,4 @@ if __name__ == "__main__":
 
     with request.urlopen(req) as response:
         response = response.read().decode('utf8')
-
-    print(response)
+        print(response)
