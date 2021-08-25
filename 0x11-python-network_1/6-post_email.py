@@ -10,8 +10,5 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     data_to_send = sys.argv[2]
-
-    values = {'email': data_to_send}
-
-    response = requests.post(url, data=values)
+    response = requests.post(url, data={'email': data_to_send})
     print(response.text)
