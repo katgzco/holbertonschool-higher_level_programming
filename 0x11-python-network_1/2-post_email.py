@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     values = {'email': information_to_pass}
     data = urllib.parse.urlencode(values)
-    data = data.encode('utf8')
+    data = data.encode('ascii')
 
     req = urllib.request.Request(req, data)
 
