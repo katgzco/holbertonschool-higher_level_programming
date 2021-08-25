@@ -15,8 +15,6 @@ if __name__ == "__main__":
     data = parse.urlencode(values)
     data = data.encode('ascii')
 
-    req = request.Request(req, data)
-
-    with request.urlopen(req) as response:
+    with request.urlopen(req, data) as response:
         response = response.read().decode('utf8')
         print(response)
