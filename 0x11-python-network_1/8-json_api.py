@@ -15,10 +15,11 @@ if __name__ == "__main__":
         dict_ = {'q': sys.argv[1]}
     url = 'http://0.0.0.0:5000/search_user'
     response = requests.post(url, data=dict_)
-    if 'application/json' not in response.headers.get('Content-Type'):
+    try:
+        if response.json():
+            r_json = response.json()
+            print('[{}] {}'.format(r_json.get('id'), r_json.get('name')))
+        else:
+            print('No result')
+    except BaseException:
         print('Not a valid JSON')
-    if response.json():
-        r_json = response.json()
-        print('[{}] {}'.format(r_json.get('id'), r_json.get('name')))
-    else:
-        print('No result')
