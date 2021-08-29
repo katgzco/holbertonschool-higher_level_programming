@@ -3,7 +3,7 @@
 import requests
 import sys
 
-if name == "main":
+if __name__ == "__main__":
     url = 'https: // api.github.com/repos/%7B % 7D/%7B % 7D/commits % 27/
     .format(sys.argv[2], sys.argv[1])
     r = requests.get(url)
