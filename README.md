@@ -1,6 +1,4 @@
-<p align="center">
-  ![Holberton](holberton.png)
-</p>
+![Holberton](holberton.png)
 
 # Holbertonschool-higher_level_programming
 
