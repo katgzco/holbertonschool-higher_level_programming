@@ -4,7 +4,8 @@
 # Holbertonschool-higher_level_programming
 
 
-#	Directory	Description
+#	Directory	Content
+
 | Folder        |
 | ------------- |
 | README.md     |
