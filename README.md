@@ -1,7 +1,7 @@
 ![Holberton](holberton.png)
 
 # Holbertonschool-higher_level_programming
-
+Python, Javascript, Sql, SqlAlchemy
 
 #	Directory	Content
 
