@@ -19,5 +19,5 @@ request(url, function (error, response) {
       }
     }
     console.log(counter);
-    }
+  }
 });
