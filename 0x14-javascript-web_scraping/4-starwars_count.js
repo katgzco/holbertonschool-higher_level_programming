@@ -11,13 +11,13 @@ request(url, function (error, response) {
   if (error) {
     console.log(error);
   } else {
-      const body = JSON.parse(response.body);
-      const films = body.results;
-      for (const film of films) {
-        for (const character of film.characters) {
-          if (character.includes('/18/')) { counter++; }
-        }
+    const body = JSON.parse(response.body);
+    const films = body.results;
+    for (const film of films) {
+      for (const character of film.characters) {
+        if (character.includes('/18/')) { counter++; }
       }
-      console.log(counter);
-  }
+    }
+    console.log(counter);
+    }
 });
